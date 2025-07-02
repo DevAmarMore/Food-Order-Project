@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Hero Section -->
+<div class="jumbotron text-center bg-danger text-white py-5">
+    <h1 class="display-4 fw-bold">Welcome to Chinese Hub 🍲</h1>
+    <p class="lead">Order your favorite dishes with ease!</p>
+    <a href="{% url 'menu' %}" class="btn btn-light btn-lg px-4">Explore Menu</a>
+</div>
+
+<!-- Popular Categories -->
+<div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">🍜 Popular Categories 🍜</h2>
+    <div class="row text-center">
+        <!-- Starters -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <img src="{% static 'images/starters.jpg' %}" class="card-img-top" alt="Starters">
+                <div class="card-body">
+                    <h5 class="card-title">Starters</h5>
+                    <p class="card-text">Kickstart your meal with delicious starters!</p>
+                    <a href="{% url 'menu' %}?category=starters" class="btn btn-danger btn-sm">View Dishes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Course -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <img src="{% static 'images/main_course.jpg' %}" class="card-img-top" alt="Main Course">
+                <div class="card-body">
+                    <h5 class="card-title">Main Course</h5>
+                    <p class="card-text">Enjoy mouth-watering main courses!</p>
+                    <a href="{% url 'menu' %}?category=main_course" class="btn btn-danger btn-sm">View Dishes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beverages -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <img src="{% static 'images/drinks.jpg' %}" class="card-img-top" alt="Beverages">
+                <div class="card-body">
+                    <h5 class="card-title">Beverages</h5>
+                    <p class="card-text">Stay refreshed with our beverages!</p>
+                    <a href="{% url 'menu' %}?category=beverages" class="btn btn-danger btn-sm">View Dishes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-lg">
+                <img src="{% static 'images/desserts.jpg' %}" class="card-img-top" alt="Desserts">
+                <div class="card-body">
+                    <h5 class="card-title">Desserts</h5>
+                    <p class="card-text">End your meal with sweet desserts!</p>
+                    <a href="{% url 'menu' %}?category=desserts" class="btn btn-danger btn-sm">View Dishes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Special Offers Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">🔥 Special Offers 🔥</h2>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="p-4 bg-warning text-dark rounded shadow-lg">
+                <h5 class="fw-bold">Combo Meal - 20% OFF!</h5>
+                <p>Get a starter, main course, and dessert at a discounted price!</p>
+                <a href="{% url 'menu' %}" class="btn btn-dark btn-sm">Order Now</a>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="p-4 bg-success text-white rounded shadow-lg">
+                <h5 class="fw-bold">Free Delivery on Orders Above $50</h5>
+                <p>Enjoy free delivery for orders over $50!</p>
+                <a href="{% url 'menu' %}" class="btn btn-light btn-sm">Order Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

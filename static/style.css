@@ -1,0 +1,18 @@
+body {
+    background-color: #f8f9fa;
+}
+.jumbotron {
+    background-image: url('static/website-7210581_1280.webp');
+    background-size: cover;
+    color: white;
+    padding: 80px 20px;
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+footer {
+    margin-top: 20px;
+    background-color: #343a40;
+    color: white;
+}
